@@ -1,0 +1,52 @@
+.cabecalho__container{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4%;
+  margin-bottom: 2rem;
+}
+
+.logo__cabecalho h1{
+  color: #fff;
+  font-size: 1rem;
+}
+
+.navegação__lista{
+  display: flex;
+  gap: 1rem;
+}
+
+.navegação__links a{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.social__container{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social__container a{
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.fa-brands{
+  color: white;
+  font-size: 1.5rem;
+  padding-right: 0.50rem;
+}
+
+/* RESPONSIVO MOBILE */
+
+@media  (max-width: 768px){
+
+  .cabecalho__container{
+    flex-direction: column;
+  }
+}
