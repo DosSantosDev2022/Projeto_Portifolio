@@ -17,6 +17,12 @@
 
 body{
   font-family: 'Poppins', sans-serif;
-  background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(61, 61, 61));
+  background-image: linear-gradient(to right, #000000 , #3d3d3d);
   background-repeat: no-repeat;
+}
+
+:root{
+  --cor-botão:#16c1c8;
+  --cor-titulos:#16c1c8;
+  --cor-houver-links:#16c1c8;
 }

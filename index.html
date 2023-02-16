@@ -8,18 +8,18 @@
   <link rel="stylesheet" href="CSS/style.css">
   <title>Portifólio</title>
 </head>
-<body>
+<body onresize="mudouTamanho">
     <!-- INÍCIO CABEÇALHO DA PÁGINA -->
   <header class="cabecalho__container">
     <div class="logo__cabecalho">
       <h1>DosSantosDev</h1>
     </div>
-
-    <nav class="navegação__container">
+    <i class="fa-solid fa-bars" id="button__mobile" onclick="clickMenu()"></i>
+    <nav class="navegação__container" id="menumobile">
       <ul class="navegação__lista">
-        <li class="navegação__links"><a href="#">Sobre mim</a></li>
-        <li class="navegação__links"><a href="#">Skilss</a></li>
-        <li class="navegação__links"><a href="#">Projetos</a></li>
+        <li class="navegação__links"><a href="#about">Sobre mim</a></li>
+        <li class="navegação__links"><a href="#skills">Skilss</a></li>
+        <li class="navegação__links"><a href="#projetos">Projetos</a></li>
         <li class="navegação__links"><a href="#">Contato</a></li>
       </ul>
     </nav>
@@ -48,7 +48,7 @@
 
     </section>
 
-    <section class="section__about">
+    <section class="section__about" id="about">
       <div class="about__text">
         <h2>Sobre mim</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer velit turpis, finibus eu condimentum ut, posuere at ipsum. Maecenas vel consequat mauris. Quisque sodales ipsum aliquet aliquam placerat. Proin varius condimentum sapien. Mauris quis elit nibh. Morbi ut facilisis nisl. Duis et leo ut odio rhoncus porta a a dui. Nullam arcu nibh, bibendum in enim sed, ullamcorper feugiat nunc. </p>
@@ -65,7 +65,7 @@
       </div>
     </section>
 
-    <section class="section__skilss">
+    <section class="section__skilss" id="skills">
       <h2>Tecnologias que uso</h2>
       <div class="list__tecnologias">
           <ul>
@@ -82,7 +82,7 @@
 
     </section>
 
-    <section class="projects__container">
+    <section class="projects__container" id="projetos">
      <div class="cads__container">
         <div class="card">
           <img class="card__imagem" src="" alt="">
@@ -149,6 +149,20 @@
   <!-- FIM RODAPÉ DA PÁGINA -->
 
   
-  
+  <script>
+    function clickMenu(){
+      if (menumobile.style.display == 'block'){
+        menumobile.style.display = 'none'
+      } else{
+        menumobile.style.display = 'block'
+      }
+    }
+
+    function mudouTamanho(){
+      if (window.innerWidth >= 768){
+        menumobile.style.display ='block'
+      }else menumobile.style.display = 'none'
+    }
+  </script>
 </body>
 </html>
